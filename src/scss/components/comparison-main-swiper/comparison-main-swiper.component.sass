@@ -1,0 +1,33 @@
+@import '../../common/files/variables.scss'
+
+.mainSwiper-wrapper
+    position: relative
+    &:hover
+        .navigation
+            opacity: 1
+    .navigation
+        opacity: 0
+        display: flex
+        justify-content: space-between
+        top: 100px
+        position: absolute
+        left: 0
+        right: 0
+        z-index: 2
+        pointer-events: none
+        transition: var(--trs-500)
+        @media(max-width: $tab)
+            display: none
+        button
+            border-radius: var(--rounded-full)
+            pointer-events: all
+            display: flex
+            align-items: center
+            justify-content: center
+            svg
+                circle
+                    transition: var(--trs-500)
+            &:hover
+                svg
+                    circle
+                        fill: var(--purple-hover-color)

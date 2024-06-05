@@ -1,0 +1,130 @@
+.loader 
+    z-index: 20
+    width: 100%
+    height: 100vh
+    justify-content: center
+    align-items: center
+    // display: none
+    position: absolute
+    // position: fixed
+    top: 0%
+    bottom: 0%
+    left: 0%
+    right: 0%
+    overflow: hidden
+    pointer-events: none
+    &_flex 
+        height: 561vh
+        display: flex
+        transform: scale(.23)
+        transform-style: preserve-3d
+        // animation: scaleDone 3s ease
+        // animation-delay: 2s
+    
+    &_column 
+        flex-direction: column
+        justify-content: flex-start
+        align-items: stretch
+        padding-left: 7vh
+        padding-right: 7vh
+        display: flex
+        &-inner 
+            height: 100%
+            flex-direction: column
+            flex: none
+            justify-content: space-between
+            align-items: stretch
+            display: flex
+            will-change: transform, width, height
+            transform: translateY(0%)
+            transform-style: preserve-3d
+            animation: columnUp 3s ease
+            &.is-reversed 
+                animation: columnUpMod 3s ease
+            
+        
+        &.is-alt 
+            justify-content: flex-end
+        
+    
+    &_img 
+        width: 100%
+        height: 100%
+        object-fit: cover
+        &-wrap 
+            width: 100vw
+            height: 100vh
+            position: relative
+            overflow: hidden
+@media(max-width: 992px)
+    .loader 
+        display: none
+        
+
+@media (min-width: 992px) 
+    body.loading
+        overflow: hidden !important
+    body 
+        &:not(.loaded) 
+            * 
+                &:not(.loader) 
+                    opacity: 0
+                    pointer-events: none
+                
+            
+            .loader * 
+                opacity: 1 !important
+                pointer-events: all !important
+    
+    .loader 
+        display: flex
+    
+
+    
+@keyframes columnUp 
+    0% 
+        transform: translateY(60%)
+        height: 340%
+    
+    100% 
+        transform: translateY(0%)
+        height: 100%
+    
+
+
+@keyframes columnUpMod 
+    0% 
+        transform: translateY(-60%)
+        height: 340%
+    
+    100% 
+        transform: translateY(0%)
+        height: 100%
+    
+
+
+@keyframes scaleDone 
+    0% 
+        transform: scale(.23)
+    
+    80% 
+        transform: scale(1)
+        opacity: 1
+    
+    100% 
+        transform: scale(1)
+        opacity: 0
+    
+
+
+@keyframes upDown 
+    0% 
+        transform: translateY(0%)
+    
+    50% 
+        transform: translateY(5%)
+    
+    100% 
+        transform: translateY(0%)
+    
+

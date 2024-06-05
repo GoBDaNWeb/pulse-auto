@@ -1,0 +1,34 @@
+@import '../../common/files/variables.scss'
+    
+.brands
+    padding-top: 100px
+    @media(max-width: $tab)
+        padding-top: 70px
+        margin: 0
+    .brandsList
+        display: flex
+        flex-direction: column
+        gap: 10px
+        margin-top: 50px
+    .btnWrapper
+        display: flex
+        justify-content: center
+        margin-top: 50px
+        .loadBtn
+            width: 425px
+            color: var(--purple-color)
+            leading-trim: both
+            text-edge: cap
+            // font-family: ActayWide, sans-serif
+            font-size: 15px
+            font-style: normal
+            font-weight: 700
+            line-height: 100%
+            text-transform: uppercase
+            padding: 20px 0px
+            transition: var(--trs-300)
+            @media(max-width: $tab)
+                width: 320px
+            &:hover 
+                color: var(--purple-hover-color)
+                border-color: var(--purple-hover-color)

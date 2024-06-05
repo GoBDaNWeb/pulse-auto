@@ -1,0 +1,58 @@
+@import '../../common/files/variables.scss'
+     
+.error-page
+    height: 100vh
+    background: url('../img/404/404-bg.jpg')
+    background-position: top !important
+    background-size: cover !important
+    background-repeat: no-repeat !important
+    position: relative
+    display: flex
+    align-items: center
+    justify-content: center
+    flex-direction: column
+    position: relative
+    h1
+        text-align: center
+        leading-trim: both
+        text-edge: cap
+        font-family: Beware
+        font-size: 450px
+        font-style: normal
+        font-weight: 400
+        line-height: 110%
+        text-transform: uppercase 
+        background: linear-gradient(180deg, rgba(255, 255, 255, 0.20) 0%, rgba(255, 255, 255, 0.00) 117.96%)
+        background-clip: text
+        -webkit-background-clip: text
+        -webkit-text-fill-color: transparent
+        // backdrop-filter: blur(7.5px) 
+        @media(max-width: $tab)
+            font-size: 180px
+    .text
+        bottom: 200px
+        display: flex
+        flex-direction: column
+        align-items: center
+        gap: 25px
+        position: absolute
+        @media(max-width: $tab)
+            bottom: 220px
+        span
+            // font-family: ActayWide, sans-serif
+            color: var(--white-color)
+            font-size: 22px
+            font-style: normal
+            font-weight: 700
+            line-height: 130% 
+            @media(max-width: $tab)
+                font-size: 18px
+                max-width: 320px
+                text-align: center
+
+        .onMain
+            width: 252px
+            height: 55px
+            display: flex
+            align-items: center
+            justify-content: center

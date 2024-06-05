@@ -1,0 +1,58 @@
+@import '../../common/files/variables.scss'
+    
+.carCard.row
+    display: flex
+    align-items: flex-end
+    gap: 50px
+    aspect-ratio: 0
+    border: 0
+    width: fit-content
+    @media(max-width: $desktop-sm)
+        gap: 20px
+        aspect-ratio: 1.5
+        align-items: flex-start
+        flex-direction: column
+    .imageWrapper
+        max-width: 300px
+        max-height: 200px
+    .info
+        img
+            width: 40px
+            height: 40px
+        .compare
+            display: flex
+            align-items: flex-end
+            gap: 10px
+            & > span
+                white-space: nowrap
+            
+    .content
+        display: flex
+        flex-direction: column
+        margin-top: 0
+    
+        .options
+            display: grid
+            grid-template-columns: repeat(2,1fr)
+            @media(max-width: $desktop-sm)
+                grid-template-columns: 1fr
+            .option
+                display: grid
+                grid-template-columns: 35% 65%
+                gap: 20px
+                @media(max-width: $desktop-md-2)
+                    grid-template-columns: 40% 55%
+                span
+                    // white-space: nowrap
+    .btns
+        display: none
+    .about-btn
+        padding: 0 35px !important
+        height: 40px
+        @media(max-width: $tab)
+            width: 130px
+            padding: 0 10px !important
+            height: 50px
+
+
+  

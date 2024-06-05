@@ -1,0 +1,80 @@
+$breakpoints: (
+    "xs": "max-width: 575px",
+    "sm": "screen and (min-width: 576px)",
+    "md": "screen and (min-width: 768px)",
+    "lg": "screen and (min-width: 992px)",
+    "xl": "screen and (min-width: 1200px)",
+);
+
+$max: 40;
+$offset: 8;
+$offset2: 4;
+$unit: 'px';
+@mixin list-loop($className, $resolution, $styleName) {
+    $i: 0;
+    $step: 0;
+    @while $i <= $max {
+    
+        #{$className + $resolution + '-' + $step} { 
+        #{$styleName}: #{$i + $unit}!important;
+        }
+
+        @if ($step > 0) and ($step < 3) {
+            $i: $i + $offset2;
+        }
+        @else {
+            $i: $i + $offset;
+        }
+
+        $step: $step + 1;
+    }
+}
+
+
+@mixin breakpoint($user-value) {
+    $my-map: map-get($breakpoints, $user-value);
+    @if $my-map {
+        @media #{$my-map} {
+            @content
+        }
+    }
+}
+
+@include breakpoint(sm) {
+    @include list-loop('.p-', #{sm}, 'padding');
+    @include list-loop('.pl-', #{sm}, 'padding-left');
+    @include list-loop('.pr-', #{sm}, 'padding-right');
+    @include list-loop('.pb-', #{sm}, 'padding-bottom');
+    @include list-loop('.pl-', #{sm}, 'padding-left');
+    @include list-loop('.m-', #{sm}, 'margin');
+    @include list-loop('.mt-', #{sm}, 'margin-top');
+    @include list-loop('.mr-', #{sm}, 'margin-right');
+    @include list-loop('.mb-', #{sm}, 'margin-bottom');
+    @include list-loop('.ml-', #{sm}, 'margin-left');
+}
+
+@include breakpoint(md) {
+    @include list-loop('.p-', #{md}, 'padding');
+    @include list-loop('.pl-', #{md}, 'padding-left');
+    @include list-loop('.pr-', #{md}, 'padding-right');
+    @include list-loop('.pb-', #{md}, 'padding-bottom');
+    @include list-loop('.pl-', #{md}, 'padding-left');
+    @include list-loop('.m-', #{md}, 'margin');
+    @include list-loop('.mt-', #{md}, 'margin-top');
+    @include list-loop('.mr-', #{md}, 'margin-right');
+    @include list-loop('.mb-', #{md}, 'margin-bottom');
+    @include list-loop('.ml-', #{md}, 'margin-left');
+}
+
+@include breakpoint(lg) {
+    @include list-loop('.p-', #{lg}, 'padding');
+    @include list-loop('.pl-', #{lg}, 'padding-left');
+    @include list-loop('.pr-', #{lg}, 'padding-right');
+    @include list-loop('.pb-', #{lg}, 'padding-bottom');
+    @include list-loop('.pl-', #{lg}, 'padding-left');
+    @include list-loop('.m-', #{lg}, 'margin');
+    @include list-loop('.mt-', #{lg}, 'margin-top');
+    @include list-loop('.mr-', #{lg}, 'margin-right');
+    @include list-loop('.mb-', #{lg}, 'margin-bottom');
+    @include list-loop('.ml-', #{lg}, 'margin-left');
+}

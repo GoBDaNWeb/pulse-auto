@@ -1,0 +1,69 @@
+@import '../../common/files/variables.scss'
+
+    
+.comparison-btn
+    position: fixed
+    top: 150px
+    right: 20px
+    z-index: 100
+    background: var(--white-color)
+    border-radius: 9999px
+    &:hover
+        .inner-content
+            width: 150px
+            .hidden-content
+                transform: translateX(0)
+                opacity: 1
+            svg
+                circle 
+                    stroke: rgba(116, 52, 164, 1)
+    @media(max-width: $tab-sm)
+        display: none
+    .inner-content
+        width: 45px
+        height: 45px
+        border: 1px solid var(--purple-color)
+        border-radius: 99999px 
+        display: flex
+        align-items: center
+        transition: var(--trs-500)
+        overflow: hidden
+        position: relative
+        
+        .hidden-content
+            position: absolute
+            top: 0
+            bottom: 0
+            right: 20px
+            display: flex
+            align-items: center
+            justify-content: center
+            pointer-events: none
+            color: var(--dark-color)
+            font-family: Onest, sans-serif
+            font-size: 14px
+            font-style: normal
+            font-weight: 400
+            line-height: 150%
+            transform: translateX(100%)
+            opacity: 0
+            transition: var(--trs-500)
+        svg
+            z-index: 2
+            circle 
+                transition: var(--trs-500)
+                stroke: rgba(116, 52, 164, 0)
+    .quantity
+        position: absolute
+        background: var(--purple-color)
+        padding: 5px
+        border-radius: var(--rounded-full)
+        color: var(--white-color)
+        left: -5px
+        top: -5px
+        width: 25px
+        height: 25px
+        display: flex
+        align-items: center
+        justify-content: center
+        z-index: 3

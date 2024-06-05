@@ -1,0 +1,106 @@
+.modal-trade 
+  position: fixed
+  top: 0
+  left: 0
+  bottom: 0
+  right: 0
+  background: rgba(42, 43, 49, 0.30)
+  backdrop-filter: blur(7.5px)
+  z-index: 8900
+  padding: 50px 48px
+  opacity: 0
+  transition: all 300ms ease
+  pointer-events: none
+  display: flex
+  align-items: center
+  justify-content: center
+  @media(max-width: $tab)
+    padding: 20px
+  
+  .modal-content 
+    background: #fff
+    width: 1045px
+    height: fit-content
+    padding: 80px
+    position: relative
+    @media(max-width: $tab)
+      padding: 40px 20px
+      width: auto
+      height: 100%
+      overflow-y: auto
+    .close-modal 
+      position: absolute
+      top: 30px
+      right: 30px
+      background: none
+      border: none
+      cursor: pointer
+      @media(max-width: $tab)
+        top: 15px
+        right: 15px
+    .title
+      h3
+        color: var(--dark-color)
+        text-align: center
+        // font-family: ActayWide, sans-serif
+        font-size: 35px
+        font-style: normal
+        font-weight: 700
+        line-height: 100%
+        text-transform: uppercase 
+        @media(max-width: $tab)
+          font-size: 30px
+      p
+        color: var(--dark-color)
+        text-align: center
+        font-family: Onest, sans-serif
+        font-size: 18px
+        font-style: normal
+        font-weight: 400
+        line-height: 150%
+        margin-top: 15px
+        @media(max-width: $tab)
+          font-size: 14px
+          text-align: center
+    form 
+      display: flex
+      flex-direction: column
+      gap: 20px
+      align-items: center
+      margin-top: 50px
+      .inputs
+        display: grid
+        grid-template-columns: repeat(3,1fr)
+        gap: 30px
+        @media(max-width: $tab)
+            grid-template-columns: repeat(2,1fr)
+            gap: 15px
+        @media(max-width: $tab-sm)
+            width: 100%
+            grid-template-columns: repeat(1,1fr)
+      .submit
+        height: 61px
+        width: 275px
+
+      p 
+        color: var(--dark-color)
+        text-align: center
+        font-family: Onest, sans-serif
+        font-size: 14px
+        font-style: normal
+        font-weight: 400
+        line-height: 130%
+        a 
+          color: var(--main-purple, #3964FF)
+          font-family: Onest, sans-serif
+          font-size: 14px
+          font-style: normal
+          font-weight: 400
+          line-height: 130%
+          
+        
+
+.modal-trade.active 
+  opacity: 1
+  pointer-events: all
+

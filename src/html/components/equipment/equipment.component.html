@@ -1,0 +1,25 @@
+<div class='equipment'>
+    @@include('../comparison-btn/comparison-btn.component.html', {})
+    <div class='breadcrumbWrapper container'>
+      @@include('../../UI/files/breadcrumbs.html', {
+        'text-link-1': 'Комплектация',
+        'class-2': 'hidden',
+        'class': 'gray',
+      })
+    </div>
+    <h3 class='title container'>
+      Hongqi E-HS9
+    </h3>
+    @@include('../equipment-about/equipment-about.component.html', {})
+    @@include('../equipment-info/equipment-info.component.html', {})
+    @@include('../equipment-programs/equipment-programs.component.html', {})
+
+    <div class='carSwiperWrapper container'>
+      <h3>HONGQI E-HS9 в наличии</h3>
+      @@include('../main-car-swiper/main-car-swiper.component.html', {})
+    </div>
+    <div class='carSwiperWrapper container'>
+      <h3>другие авто в наличии</h3>
+      @@include('../main-car-swiper/main-car-swiper.component.html', {})
+    </div>
+  </div>

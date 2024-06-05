@@ -1,0 +1,94 @@
+<div class="creditForm">
+  <span class="title">кредитный калькулятор</span>
+  <form class="form">
+    <label>
+      @@include('../../UI/files/checkbox.html', { 'id': 'model',})
+      <span>Выбрать конкретную модель для расчета</span>
+    </label>
+    <div class="mainInputs">
+      @@include('../brand-selector/brand-selector.component.html', {'index': 'z103'})
+      @@include('../model-selector/model-selector.component.html', {'index': 'z102'})
+      @@include('../year-selector/year-selector.component.html', {'index': 'z101'})
+      <div class="input__row">
+        <input
+          id="cost"
+          type="text"
+          class="input form__input-value input__valid-positive-number"
+          placeholder="Стоимость, руб."
+        />
+        <small class="input__item-small"></small>
+      </div>
+      <div class="with-range">
+        @@include('../../UI/files/input.html', { 'id': 'contribution-input','placeholder': 'Взнос, руб.',}) 
+        @@include('../../UI/files/range.html', {'id': 'contribution-range', 'min': '0', 'value': 0, 'max': 10000000,'step': 10000})
+      </div>
+      <div class="with-range">
+        @@include('../../UI/files/input.html', { 'id': 'term-input','placeholder': 'Срок, мес.',}) 
+        @@include('../../UI/files/range.html', {'id': 'term-range', 'min': '1', 'max': 100, 'value': 1, 'step': 1})
+      </div>
+      <label>
+        @@include('../../UI/files/checkbox.html', { 'id': 'trade',})
+        <span>Машина в трейд-ин</span>
+      </label>
+      <label>
+        @@include('../../UI/files/checkbox.html', { 'id': 'else',})
+        <span>Возможно что то еще</span>
+      </label>
+    </div>
+
+    <div class="userData">
+      <div class="input__row">
+        <input
+          type="text"
+          class="input form__input-value input__valid-name"
+          placeholder="Имя"
+        />
+        <small class="input__item-small"></small>
+      </div>
+      <div class="input__row">
+        <input
+          type="text"
+          class="input form__input-value input__valid-phone"
+          placeholder="+7"
+        />
+        <small class="input__item-small"></small>
+      </div>
+    </div>
+    <div class="calc">
+      <div class="calcList">
+        <div class="calcItem">
+          <span class="label">Сумма кредита:</span>
+          <span class="value summ">0 Р</span>
+        </div>
+        <div class="calcItem">
+          <span class="label">Процентная ставка:</span>
+          <span class="value">15 %</span>
+        </div>
+        <div class="calcItem">
+          <span class="label">Срок кредита:</span>
+          <span class="value term">1 мес</span>
+        </div>
+        <div class="calcItem">
+          <span class="label">Переплата по кредиту:</span>
+          <span class="value contribution">0 Р</span>
+        </div>
+        <div class="total">
+          <span class="label">Ежемесячный платеж:</span>
+          <span class="value payment">0 Р</span>
+        </div>
+      </div>
+      <div class="submit">
+        <button class="button primary submitBtn">Получить предложение</button>
+        <p>
+          Нажимая кнопку «Заказать консультацию» вы даёте свое согласие с
+          <a href="#"> правилами обработки персональных данных.</a>
+        </p>
+      </div>
+    </div>
+  </form>
+  <div class="badgeWrapper">
+    <div class="badge">
+      Расчет является предварительным и размещен в информационных целях
+    </div>
+  </div>
+</div>

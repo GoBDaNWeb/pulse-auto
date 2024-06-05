@@ -1,0 +1,175 @@
+@import '../../common/files/variables.scss'
+     
+.model-exterior
+    margin-top: 100px
+    padding-bottom: 100px !important
+    @media(max-width: $tab)
+        margin-top: 200px
+    .top
+        display: flex
+        justify-content: space-between
+        margin-bottom: 50px
+        gap: 30px
+        @media(max-width: $tab)
+            flex-direction: column
+            margin-bottom: 30px
+        .title
+            // font-family: ActayWide, sans-serif
+            font-size: 35px
+            font-style: normal
+            font-weight: 700
+            line-height: 100%
+            text-transform: uppercase 
+            @media(max-width: $tab)
+                font-size: 25px
+        p
+            max-width: 655px
+            // font-family: ActayWide, sans-serif
+            font-size: 22px
+            font-style: normal
+            font-weight: 700
+            line-height: 130%
+            @media(max-width: $tab)
+                font-size: 18px
+    .model-exterior-content
+        .swiper-container
+            position: relative
+            display: flex
+            flex-direction: column
+            .exterior-main-swiper
+                overflow: hidden
+                aspect-ratio: 2.6
+                span
+                    color: var(--dark-color)
+                    z-index: 1
+                    // font-family: ActayWide, sans-serif
+                    font-size: 25px
+                    font-style: normal
+                    font-weight: 700
+                    line-height: 100%
+                    text-transform: uppercase
+                    position: absolute
+                    bottom: 50px
+                    left: 50px
+                    @media(max-width: $tab)
+                        bottom: 20px
+                        left: 20px
+                        font-size: 20px
+                .imageWrapper
+                    position: relative
+                    width: 100%
+                    height: 100%
+                    img
+                        position: absolute
+                        top: 0
+                        left: 0
+                        bottom: 0
+                        right: 0
+                        object-fit: cover
+                        width: 100%
+                        height: 100%
+            .exterior-main-swiper-text
+                margin-top: 30px
+                max-width: 600px
+                overflow: hidden
+                padding-top: 10px
+                order: 0
+                @media(max-width: $tab) 
+                    margin-top: 10px
+                .swiper-slide
+                    opacity: 0 !important
+                    color: var(--dark-color)
+                    // font-family: ActayWide, sans-serif
+                    font-size: 25px
+                    font-style: normal
+                    font-weight: 700
+                    line-height: 100%
+                    text-transform: uppercase
+                    max-width: 600px
+                    @media(max-width: 1200px)
+                        max-width: 500px
+                    @media(max-width: $tab)
+                        max-width: 600px
+                        font-size: 20px
+                        line-height: 115%
+                .swiper-slide-active
+                    opacity: 1 !important
+            .thumSwiperWrapper
+                position: absolute
+                right: 0
+                bottom: -30px
+                display: flex
+                justify-content: flex-start
+                gap: 20px
+                order: 1
+
+                @media(max-width: $tab)
+                    align-items: flex-start
+                    left: 0
+                    position: relative
+                .swiper-wrapper 
+                    flex-wrap: wrap
+                    row-gap: 10px
+                span
+                    color: var(--dark-color)
+                    // font-family: ActayWide, sans-serif
+                    font-size: 16px
+                    font-style: normal
+                    font-weight: 700
+                    line-height: 110% 
+                    text-transform: uppercase 
+                    z-index: 1
+                    max-width: 100px
+                    @media(max-width: $tab)
+                        color: var(--dark-color)
+                        max-width: 120px
+                        min-width: 120px
+                        font-size: 14px
+                .exterior-main-thumbs
+                    @media(max-width: $tab)
+                        margin: 0
+                    .thumb
+                        cursor: pointer
+                        width: 50px !important
+                        height: 50px !important
+                        border: 1px solid var(--dark-color)
+                        @media(max-width: $tab)
+                            border: 1px solid var(--gray-color)
+                            width: 30px !important
+                            height: 30px !important
+        .elements  
+            display: grid
+            grid-template-columns: repeat(2, 1fr)
+            row-gap: 80px
+            column-gap: 30px
+            margin-top: 30px
+            .element
+                height: fit-content
+                .imageWrapper
+                    position: relative
+                    width: 100%
+                    height: 100%
+                    aspect-ratio: 2
+                    img
+                        position: absolute
+                        top: 0
+                        left: 0
+                        bottom: 0
+                        right: 0
+                        object-fit: cover
+                .elementContent
+                    margin-top: 30px
+                    .title
+                        // font-family: ActayWide, sans-serif
+                        font-size: 25px
+                        font-style: normal
+                        font-weight: 700
+                        line-height: 100%
+                        text-transform: uppercase 
+                        margin-bottom: 20px
+                        display: block
+                    p
+                        font-size: 16px
+                        font-style: normal
+                        font-weight: 400
+                        line-height: 150%

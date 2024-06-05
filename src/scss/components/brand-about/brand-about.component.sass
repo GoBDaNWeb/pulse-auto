@@ -1,0 +1,93 @@
+@import '../../common/files/variables.scss'
+   
+.brand-about
+    position: relative
+    margin-top: 100px
+    @media(max-width: $tab)
+        margin-top: 50px
+    &:hover 
+        .navigation
+            opacity: 1
+    .brand-about-swiper
+        width: 100%
+        height: 100%
+        .aboutItem
+            width: 100%
+            height: 100%
+            // aspect-ratio: 3
+            display: grid
+            grid-template-columns: 55% 40%
+            gap: 5%
+            @media(max-width: $tab)
+                grid-template-columns: repeat(1,1fr)
+                gap: 3%
+            .imageWrapper
+                aspect-ratio: 1.5
+                position: relative
+                video
+                    object-fit: cover
+                    position: relative !important
+                    width: 100%
+                    height: 100%
+                img
+                    object-fit: cover
+                    position: relative !important
+                    width: 100%
+                    height: 100%
+                .unmuteBtn
+                    position: absolute
+                    bottom: 20px
+                    right: 20px
+        .aboutItemContent 
+            display: flex
+            flex-direction: column
+            gap: 30px
+            @media(max-width: $tab)
+                gap: 15px
+            span
+                color: var(--dark-color)
+                // font-family: ActayWide, sans-serif
+                font-size: 35px
+                font-style: normal
+                font-weight: 700
+                line-height: 100% 
+                text-transform: uppercase
+                @media(max-width: $tab)
+                    font-size: 25px
+            p
+                color: var(--dark-color)
+                font-family: Onest, sans-serif
+                font-size: 16px
+                font-style: normal
+                font-weight: 400
+                line-height: 150%
+                @media(max-width: $tab)
+                    font-size: 14px
+    .navigation
+        opacity: 0
+        display: flex
+        justify-content: space-between
+        top: 0
+        bottom: 0
+        margin: auto
+        position: absolute
+        left: 111px
+        right: 111px
+        z-index: 2
+        pointer-events: none
+        transition: var(--trs-500)
+        @media(max-width: $tab)
+            display: none
+        button
+            border-radius: var(--rounded-full)
+            pointer-events: all
+            display: flex
+            align-items: center
+            justify-content: center
+            svg
+                circle
+                    transition: var(--trs-500)
+            &:hover
+                svg
+                    circle
+                        fill: var(--purple-hover-color)

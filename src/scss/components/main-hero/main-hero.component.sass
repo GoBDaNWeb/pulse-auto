@@ -1,0 +1,147 @@
+@import '../../common/files/variables.scss'
+    
+.hero
+    height: 100vh
+    position: relative
+    @media(max-width: $tab-sm)
+        height: 90vh
+    @media(max-width: $pre-mob)
+        height: 50vh
+    .innerContent
+        position: absolute
+        bottom: 181px
+        left: 50px
+        z-index: 2
+        @media(max-width: $tab)
+            left: 0
+            right: 0
+            margin: auto
+            display: flex
+            justify-content: center
+            bottom: 120px
+        span
+            display: inline-block
+            color: var(--white-color)
+            leading-trim: both
+            text-edge: cap
+            // font-family: ActayWide, sans-serif
+            font-size: 55px
+            font-style: normal
+            font-weight: 700
+            line-height: 90%
+            text-shadow:  3px 3px 4px #000
+            text-transform: uppercase 
+            @media(max-width: $tab)
+                font-size: 25px
+                line-height: 110%
+   
+    .swiper
+        height: 100vh
+        @media(max-width: $tab-sm)
+            height: 90vh
+        @media(max-width: $pre-mob)
+            height: 50vh
+        .imageWrapper
+            position: relative
+            width: 100%
+            height: 100%
+            display: flex
+            justify-content: center
+            align-items: center
+
+            img
+                position: absolute
+                top: 0
+                left: 0
+                bottom: 0
+                right: 0
+                object-fit: cover
+                width: 100%
+                height: 100%
+    .navigation
+        position: absolute
+        bottom: 64px
+        right: 20px
+        left: 20px
+        align-items: center
+        justify-content: space-between
+        z-index: 2
+        pointer-events: none
+        display: none
+        button
+            pointer-events: all
+        @media(max-width: $desktop-sm)
+            display: flex
+            left: 5px
+            right: 5px
+            bottom: 65px
+        @media(max-width: $tab)
+            display: flex
+            left: 5px
+            right: 5px
+            bottom: 34px
+    .thumbs
+        position: absolute
+        bottom: 50px
+        right: 50px
+        left: 50px
+        height: 80px
+        overflow: hidden
+        @media(max-width: $tab)
+            left: 20px
+            right: 20px
+            bottom: 20px
+        .swiper-slide.swiper-slide-thumb-active
+            .imageWrapper 
+                &:after
+                    opacity: 1
+                svg
+                    path 
+                        fill: var(--purple-hover-color)
+        .swiper-slide 
+            display: flex
+            justify-content: center
+            align-items: center
+            svg
+
+                width: 100%
+        .imageWrapper
+            display: flex
+            align-items: center
+            justify-content: center
+            cursor: pointer
+            width: 100%
+            height: 100%
+            @media(max-width: $tab)
+                height: 55px
+                svg 
+                    height: 55px
+            &::after
+                content: ''
+                position: absolute
+                height: 1px
+                width: 60%
+                left: 0
+                right: 0
+                margin: auto
+                bottom: 0
+                opacity: 0
+                background: var(--purple-hover-color)
+                transition: var(--trs-500)
+            svg
+                path 
+                    filter: drop-shadow( 3px 3px 2px rgba(0, 0, 0, .7))
+                    transition: var(--trs-500)
+            &:hover
+                &:after
+                    opacity: 1
+                svg
+                    path 
+                        fill: var(--purple-hover-color)
+        img
+            cursor: pointer
+            position: relative
+            @media(max-width: $tab)
+                transform: scale(0.7)
+        
+    

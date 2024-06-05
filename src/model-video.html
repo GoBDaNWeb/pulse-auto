@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="ru">
+    @@include('html/components/head/head.component.html', {
+        'title':'cars crave - Hongqi E-HS9',
+    })
+    <body>
+        @@include('html/components/header/header.component.html', {})
+        @@include('html/components/car-catalog/car-catalog.component.html', {})
+        @@include('html/components/loader/loader.component.html', {})
+        <main class="">
+            @@include('html/components/model-video/model-video.component.html', {})
+        </main>
+        @@include('html/components/footer/footer.component.html', {})
+        @@include('html/components/mobile-menu/mobile-menu.component.html', {})
+        @@include('html/components/modal-call/modal-call.component.html', {})
+        @@include('html/components/modal-trade/modal-trade.component.html', {})
+        @@include('html/components/modal-success/modal-success.component.html', {})
+        @@include('html/components/modal-delivery/modal-delivery.component.html', {})
+        <script src="https://api-maps.yandex.ru/2.1/?apikey=ваш API-ключ&lang=ru_RU">
+        </script>
+        <script src="js/app.min.js"></script>
+        <script src="//cdn.callibri.ru/callibri.js" type="text/javascript" charset="utf-8"></script>
+    </body>
+</html>

@@ -1,0 +1,86 @@
+@import '../../common/files/variables.scss'
+    
+.stock
+    background: var(--white-color)
+    padding: 84px 50px
+    margin-top: 80px
+    position: relative
+    @media(max-width: $tab)
+        padding: 70px 20px
+    .top
+        display: flex
+        justify-content: space-between
+        .aboutBtn
+            display: flex
+            align-items: center
+            gap: 20px
+            leading-trim: both
+            text-edge: cap
+            // font-family: ActayWide, sans-serif
+            font-size: 15px
+            font-style: normal
+            font-weight: 700
+            line-height: 100%
+            text-transform: uppercase 
+            @media(max-width: $tab)
+                display: none
+            span
+                color: var(--purple-color)
+                transition: var(--trs-300)
+            svg
+                circle
+                    transition: var(--trs-300)
+                path
+                    transition: var(--trs-300)
+            &:hover
+                span
+                    color: var(--purple-hover-color)
+                svg
+                    circle
+                        stroke: var(--purple-hover-color)
+                    path
+                        fill: var(--purple-hover-color)
+    .stockList
+        margin-top: 50px
+    .aboutBtnMob
+        display: none
+        @media(max-width: $tab)
+            display: flex
+            align-items: center
+            gap: 20px
+            leading-trim: both
+            text-edge: cap
+            // font-family: ActayWide, sans-serif
+            font-size: 15px
+            font-style: normal
+            font-weight: 700
+            line-height: 100%
+            text-transform: uppercase 
+            margin-top: 30px
+            span
+                color: var(--purple-color)
+                transition: var(--trs-300)
+            svg
+                circle
+                    transition: var(--trs-300)
+                path
+                    transition: var(--trs-300)
+            &:hover
+                span
+                    color: var(--purple-hover-color)
+                svg
+                    circle
+                        stroke: var(--purple-hover-color)
+                    path
+                        fill: var(--purple-hover-color)
+    .grad
+        bottom: -280px
+        top: auto
+        background: var(--bg-grad)
+        max-height: 300px
+        height: 100%
+        position: absolute
+        right: 0
+        left: 0
+        pointer-events: none
+        z-index: 2

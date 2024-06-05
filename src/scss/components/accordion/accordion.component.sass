@@ -1,0 +1,101 @@
+@import '../../common/files/variables.scss'
+
+.accordion-wrapper
+    .accordion.active
+        .icon
+            transform: rotate(0deg)
+    .accordion 
+        display: flex
+        justify-content: space-between
+        align-items: center
+        width: 100%
+        span
+            color: var(--purple-color)
+            // font-family: ActayWide, sans-serif
+            font-size: 25px
+            font-style: normal
+            font-weight: 700
+            line-height: 100%
+            text-transform: uppercase
+            text-align: left
+            @media(max-width: $tab)
+                font-size: 20px
+        .icon
+            transform: rotate(180deg)
+            transition: var(--trs-800)
+            display: flex
+            justify-content: center
+            align-items: center
+
+    .accordion-content 
+        max-height: 0
+        overflow: hidden
+        transition:  var(--trs-800)
+        .equipment-swiper-wrapper 
+            span
+                color: #9C9FAE
+                font-weight: 400
+                font-size: 16px
+                line-height: 24px
+                font-family: 'Onest', sans-serif
+                padding-top: 25px
+                border-top: 1px solid #E5EBF1
+                text-align: center
+                display: block
+                width: 100%
+                @media(max-width: $tab) 
+                    font-size: 12px
+                    line-height: 14px
+                    padding-top: 15px
+            .swiper-slide
+                padding-top: 15px
+                padding-bottom: 25px
+                font-weight: 400
+                font-size: 16px
+                line-height: 24px
+                font-family: 'Onest', sans-serif
+                color: #2A2B31
+                text-align: center
+                @media(max-width: $tab) 
+                    font-size: 14px
+                    line-height: 21px
+                    padding-top: 10px
+                    padding-bottom: 15px
+        table
+            width: 100%
+            tr
+                th
+                    color: #9C9FAE
+                    font-weight: 400
+                    font-size: 16px
+                    line-height: 24px
+                    font-family: 'Onest', sans-serif
+                    padding-top: 25px
+                    border-top: 1px solid #E5EBF1
+                    text-align: center
+
+                td
+                    padding-top: 15px
+                    padding-bottom: 25px
+                    font-weight: 400
+                    font-size: 16px
+                    line-height: 24px
+                    font-family: 'Onest', sans-serif
+                    color: #2A2B31
+                    text-align: center
+        ul
+            list-style: inside
+            li
+                margin-left: 10px
+                color: var(--dark-color)
+                font-family: Onest,sans-serif
+                font-size: 16px
+                font-style: normal
+                font-weight: 400
+                line-height: 150%
+
+    .accordion-content.active 
+        max-height: 150vh
+        transition: var(--trs-800)
+        padding-top: 20px
+

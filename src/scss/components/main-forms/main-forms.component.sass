@@ -1,0 +1,71 @@
+@import '../../common/files/variables.scss'
+    
+.forms
+    margin: 50px 0 100px
+    position: relative
+    z-index: 3
+    .bg
+        background: url('../img/form-bg.png')
+        position: absolute
+        background-repeat: no-repeat !important
+        background-size: cover !important
+        background-position: center !important
+        height: 900px
+        top: 560px
+        left: 0
+        right: 0
+        z-index: 1
+    .formWrapper
+        display: flex
+        flex-direction: column
+        gap: 110px
+        position: relative
+        padding: 0 50px
+        z-index: 100
+        max-width: 1110px
+        margin: auto
+        @media(max-width: $tab) 
+            padding: 0 20px
+    .programs
+        text-align: center
+        margin-top: 80px
+        padding: 0 50px
+        @media(max-width: $tab) 
+            padding: 0 20px
+        p
+            max-width: 884px
+            margin: 30px auto 50px
+        .programsList
+            display: grid
+            grid-template-columns: repeat(6,1fr)
+            gap: 25px
+            @media(max-width: $desktop-md)
+                grid-template-columns: repeat(4,1fr)
+            @media(max-width: $tab)
+                grid-template-columns: repeat(3,1fr)
+            @media(max-width: $tab-sm)
+                display: none
+        .programsListMob
+            display: none
+            overflow: hidden
+            .innerList
+                display: flex
+                animation: scroll 15s linear infinite
+              
+            @media(max-width: $tab-sm)
+                display: flex
+                flex-direction: column
+                object
+                    width: 201px !important
+                    height: 50px !important
+                    svg
+                        width: 100% !important
+                        height: 100% !important
+                    
+
+@keyframes scroll 
+    from 
+        transform: translateX(0)
+    to 
+        transform: translateX(calc(-100% - 20px))
+    

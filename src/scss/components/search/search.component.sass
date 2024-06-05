@@ -1,0 +1,146 @@
+@import '../../common/files/variables.scss'
+    
+.search-page
+    padding-top: 150px
+    padding-bottom: 100px
+    background: var(--white-color)
+    @media(max-width: $tab)
+        padding-top: 100px
+        padding-bottom: 70px
+    .top
+        padding-bottom: 30px
+        h3
+            margin-top: 30px
+            margin-bottom: 30px
+        p
+            color: var(--gray-text-color)
+            font-family: Onest, sans-serif
+            font-size: 14px
+            font-style: normal
+            font-weight: 400
+            line-height: 150% 
+            span
+                color: var(--dark-color)
+    .content
+        display: grid
+        grid-template-columns: 75% 20%
+        justify-content: space-between
+        @media(max-width: $desktop-sm)
+            grid-template-columns: 45% 50%
+        @media(max-width: $tab)
+            grid-template-columns: 100%
+        .carList
+            display: flex
+            flex-direction: column
+            gap: 10px
+            .count
+                color: var(--dark-color)
+                // font-family: ActayWide, sans-serif
+                font-size: 22px
+                font-style: normal
+                font-weight: 700
+                line-height: 130%
+            .carWrapper
+                display: flex
+                gap: 15px
+                padding: 30px 0
+                border-top: 1px solid var(--gray-color)
+                & > div
+                    width: 100%
+                    @media(max-width: $desktop-sm)
+                        width: fit-content
+        .btnWrapper
+            display: flex
+            align-items: center
+            justify-content: center
+            margin-top: 30px
+            .loadBtn
+                width: 426px
+                height: 65px
+        .search-about
+            position: relative
+            @media(max-width: $tab)
+                margin-top: 70px
+            .aboutContent
+                position: sticky
+                top: 150px
+                .imageWrapper
+                    position: relative
+                    width: 100%
+                    height: 100%
+                    aspect-ratio: 2
+                    img
+                        object-fit: cover
+                        width: 100%
+                        height: 100%
+                .brand
+                    margin-top: 15px
+                    margin-bottom: 15px
+                    display: flex
+                    align-items: center
+                    gap: 30px
+                    .imageWrapper
+                        width: 84px
+                        height: 84px
+                        display: flex
+                        align-items: center
+                        justify-content: center
+                        border: 1px solid var(--gray-color)
+                        @media(max-width: $tab)
+                            width: 60px
+                            height: 60px
+                        span
+                            width: 80%
+                            height: 80%
+                            display: block
+                            position: relative
+                            img
+                                width: 100%
+                                height: 100%
+                                object-fit: contain
+                    .brandTitle
+                        color: var(--dark-color)
+                        // font-family: ActayWide, sans-serif
+                        font-size: 25px
+                        font-style: normal
+                        font-weight: 700
+                        line-height: 100%
+                        text-transform: uppercase
+                .description
+                    margin-bottom: 15px
+                    color: var(--dark-color)
+                    font-family: Onest, sans-serif
+                    font-size: 16px
+                    font-style: normal
+                    font-weight: 400
+                    line-height: 150%
+                
+                .viewBtn
+                    display: flex
+                    align-items: center
+                    justify-content: flex-start
+                    gap: 20px
+                    &:hover
+                        span
+                            color: var(--purple-hover-color)
+                        svg
+                            circle
+                                stroke: var(--purple-hover-color)
+                            path
+                                fill: var(--purple-hover-color)
+                    @media(max-width: $tab)
+                        justify-content: flex-start
+                    span
+                        color: var(--purple-color)
+                        // font-family: ActayWide, sans-serif
+                        font-size: 13px
+                        font-style: normal
+                        font-weight: 700
+                        line-height: 100%
+                        text-transform: uppercase
+                        transition: var(--trs-500)
+                    svg
+                        circle
+                            transition: var(--trs-500)
+                        path
+                            transition: var(--trs-500)

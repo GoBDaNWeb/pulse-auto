@@ -1,0 +1,39 @@
+@import '../../common/files/variables.scss'
+     
+.breadcrumbs.white
+    .link
+        p
+            color: var(--white-color)
+    svg
+        path
+            stroke: var(--white-color)
+.breadcrumbs.gray
+    color: var(--gray-text-color)
+    .link
+        p
+            color: var(--gray-text-color)
+    svg
+        path
+            stroke: var(--gray-text-color)
+.breadcrumbs
+    display: flex
+    align-items: center
+    gap: 10px
+    @media(max-width: $tab-sm)
+        display: none
+    .link.hidden
+        display: none 
+    .link
+        font-size: 12px
+        font-style: normal
+        font-weight: 400
+        line-height: 150%
+        position: relative
+        display: flex
+        gap: 10px
+        span.hidden
+            display: none
+        &:last-child
+            pointer-events: none
+            span
+                display: none

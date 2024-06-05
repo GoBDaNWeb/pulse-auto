@@ -1,0 +1,57 @@
+<div class="comparison container">
+  <div class="breadcrumbWrapper">
+    @@include('../../UI/files/breadcrumbs.html', { 'text-link-1': 'Cравнение', 'class-2': 'hidden', 'class': 'gray', })
+  </div>
+  <div class="top">
+    <h3>сравнение</h3>
+    <button class="button clear clearBtn">
+      <svg
+        width="20"
+        height="20"
+        viewBox="0 0 20 20"
+        fill="none"
+        xmlns="http://www.w3.org/2000/svg"
+      >
+        <circle cx="10" cy="10" r="9.5" stroke="#3964FF" />
+        <path d="M13.4648 6.96436L6.96484 13.4644" stroke="#3964FF" />
+        <path d="M6.96484 6.96436L13.4648 13.4644" stroke="#3964FF" />
+      </svg>
+      <span> очистить </span>
+    </button>
+  </div>
+  <!-- <SecondSwiper mainSwiper={mainSwiper} setSecondSwiper={setSecondSwiper} />
+    <MainSwiper secondSwiper={secondSwiper} setMainSwiper={setMainSwiper} /> -->
+  @@include('../comparison-main-swiper/comparison-main-swiper.component.html',{})
+  @@include('../comparison-second-swiper/comparison-second-swiper.component.html',{})
+  <div class="btnWrapper">
+    <button class="button dotted moreBtn">Подробнее</button>
+  </div>
+  <div class="form-wrapper">
+    <h3>Получить консультацию</h3>
+    <form class="form">
+      <div class="inputs">
+        <div class="input__row">
+          <input
+            type="text"
+            class="input form__input-value input__valid-name"
+            placeholder="Имя"
+          />
+          <small class="input__item-small"></small>
+        </div>
+        <div class="input__row">
+          <input
+            type="text"
+            class="input form__input-value input__valid-phone"
+            placeholder="+7"
+          />
+          <small class="input__item-small"></small>
+        </div>
+      </div>
+    <p>Нажимая кнопку «Отправить» вы даёте свое согласие с <a href="">правилами обработки персональных данных.</a> </p>
+    <button type="submit" class="button primary submit">
+        Отправить
+    </button>
+    </form>
+  </div>
+  
+</div>

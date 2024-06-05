@@ -1,0 +1,72 @@
+@import '../../common/files/variables.scss'
+     
+.brand-models
+    padding-top: 100px
+    @media(max-width: $tab)
+        padding-top: 70px
+    .title
+        // font-family: ActayWide, sans-serif
+        font-size: 35px
+        font-style: normal
+        font-weight: 700
+        line-height: 100%
+        text-transform: uppercase 
+        margin-bottom: 30px
+        display: block
+        @media(max-width: $tab)
+            font-size: 25px
+    .modelsList
+        display: flex
+        align-items: center
+        gap: 30px
+        overflow: auto
+        @media(max-width: $tab)
+            padding-bottom: 20px
+        .model 
+            padding: 35px 30px
+            border: 1px solid var(--gray-color)
+            cursor: pointer
+            display: flex
+            flex-direction: column
+            gap: 30px
+            transition: var(--trs-500)
+            min-width: 263px
+            &:hover
+                border-color: var(--purple-hover-color) 
+                .modelContent
+                    .modelTitle
+                        color: var(--purple-hover-color)
+                    p
+                        color: var(--purple-hover-color)
+            .imageWrapper
+                width: 222px
+                height: 81px
+                position: relative
+                img
+                    object-fit: contain
+                    width: 100%
+                    height: 100%
+            .modelContent
+
+                .modelTitle
+                    overflow: hidden
+                    color: var(--dark-color)
+                    text-overflow: ellipsis
+                    // font-family: ActayWide, sans-serif
+                    font-size: 18px
+                    font-style: normal
+                    font-weight: 700
+                    line-height: 130% 
+                    transition: var(--trs-500)
+                    @media(max-width: $tab)
+                        font-size: 14px
+                p
+                    color: var(--dark-color)
+                    // font-family: ActayWide, sans-serif
+                    font-size: 24px
+                    font-style: normal
+                    font-weight: 700
+                    line-height: 130%
+                    transition: var(--trs-500)
+                    @media(max-width: $tab)
+                        font-size: 18px

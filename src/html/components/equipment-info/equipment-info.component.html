@@ -1,0 +1,53 @@
+<div class="equipment-info">
+  <div class="decription container">
+    <div class="text">
+      <p>
+        Hongqi относится к китайским премиум-брендам, которые уже достаточно
+        давно существуют на рынке. Первый выпуск автомобиля был в 1959 г. В
+        течение нескольких десятилетий здесь выпускался ряд проверенных моделей,
+        которые постоянно совершенствовались. Модельный ряд пережил несколько
+        поколений и перезапусков, поэтому цена и комплектация Hongqi может
+        заметно отличаться. Это автомобили с действительно оригинальным внешним
+        видом. На российский рынок первые поставки начали производиться только в
+        2023 году. К характерным чертам модельного ряда Hongqi можно отнести
+        высокий уровень надежности, привлекательный внешний вид и хорошее
+        техническое оснащение. Современные модели имеют качественную
+        электронику.
+      </p>
+      <button class="decription-btn">
+        <svg
+          width="30"
+          height="30"
+          viewBox="0 0 30 30"
+          fill="none"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <circle
+            cx="15"
+            cy="15"
+            r="14.5"
+            transform="rotate(90 15 15)"
+            stroke="#3964FF"
+          />
+          <path
+            d="M15 20.25L17.8868 15.25L12.1132 15.25L15 20.25ZM14.5 9L14.5 15.75L15.5 15.75L15.5 9L14.5 9Z"
+            fill="#3964FF"
+          />
+        </svg>
+
+        <span>развернуть</span>
+      </button>
+    </div>
+  </div>
+  @@include('../equipment-cost/equipment-cost.component.html', {})
+  @@include('../equipment-second-swiper/equipment-second-swiper.component.html',
+  {})
+  <div class="accordionList container">
+    @@include('../accordion/accordion.component.html', {'title': 'заголовок характеристики'}) 
+    @@include('../accordion/accordion.component.html',{'title': 'заголовок характеристики'})
+    @@include('../accordion/accordion.component.html', {'title': 'заголовок характеристики'}) 
+    @@include('../accordion/accordion.component.html',{'title': 'заголовок характеристики'})
+    @@include('../accordion/accordion.component.html', {'title': 'заголовокхарактеристики'})
+    @@include('../accordion/accordion.component.html',{'title': 'заголовок характеристики'})
+  </div>
+</div>

@@ -1,0 +1,136 @@
+.menuWrapper.active
+    background: rgba(42, 43, 49, 0.30)
+    backdrop-filter: blur(7.5px)
+    pointer-events: all
+    .closeMenuBtn
+        opacity: 1
+    .menu
+        transform: translateX(0)
+        opacity: 1
+.menuWrapper
+    background: rgba(42, 43, 49, 0)
+    backdrop-filter: blur(0)
+    position: fixed
+    top: 0
+    left: 0
+    bottom: 0
+    right: 0
+    z-index: var(--z-menu)
+    pointer-events: none
+    transition: var(--trs-500)
+    .closeMenuBtn
+        position: absolute
+        top: 20px
+        left: 20px
+        opacity: 0
+        transition: var(--trs-500)
+    .menu
+        width: 83vw
+        height: 100%
+        background: var(--white-color)
+        right: 0
+        position: absolute
+        transform: translateX(100%)
+        transition: var(--trs-500)
+        opacity: 0
+        .top
+            margin:  20px
+            padding-bottom: 20px
+            border-bottom: 1px solid var(--gray-color)
+            .searchBtn
+                display: flex
+                align-items: center
+                gap: 20px
+                span
+                    color: var(--dark-color)
+                    font-family: Onest, sans-serif
+                    font-size: 12px
+                    font-style: normal
+                    font-weight: 400
+                    line-height: 150%
+        .navigation
+            display: flex
+            margin-top: 50px
+            flex-direction: column
+            gap: 20px
+            padding: 0 20px 100px
+            .link
+                color: var(--dark-color)
+                font-family: Onest, sans-serif
+                font-size: 16px
+                font-style: normal
+                font-weight: 500
+                line-height: 140%
+                letter-spacing: 1.6px
+                text-transform: uppercase
+        .info
+            padding-top: 50px
+            border-top: 1px solid var(--gray-color)
+            margin: 0 20px
+            display: flex
+            flex-direction: column
+            gap: 30px
+            .mainInfo
+                display: flex
+                justify-content: space-between
+                align-items: flex-start
+                gap: 30px
+                .phoneWrapper
+                    display: flex
+                    flex-direction: column
+                    gap: 15px
+                    .phone
+                        color: #222220
+                        font-family: Onest, sans-serif
+                        font-size: 18px
+                        font-style: normal
+                        font-weight: 700
+                        line-height: 120% 
+                        text-transform: uppercase 
+                    .orderBtn
+                        color: var(--purple-color)
+                        // font-family: ActayWide, sans-serif
+                        font-size: 12px
+                        font-style: normal
+                        font-weight: 700
+                        line-height: 100%
+                        text-transform: uppercase 
+                        text-align: left
+                .social
+                    display: flex
+                    align-items: center
+                    gap: 20px
+            .secondInfo
+                display: flex
+                flex-direction: column
+                gap: 5px
+                .address
+                    display: flex
+                    align-items: flex-start
+                    gap: 10px
+                    span
+                        font-family: Onest,sans-serif
+                        font-size: 14px
+                        font-style: normal
+                        font-weight: 400
+                        line-height: 150% 
+                        color: var(--dark-color)
+                .clock
+                    display: flex
+                    align-items: flex-start
+                    gap: 10px
+                    span
+                        font-family: Onest,sans-serif
+                        font-size: 14px
+                        font-style: normal
+                        font-weight: 400
+                        line-height: 150% 
+                        color: var(--dark-color)
+        .estimationBtn
+            position: absolute
+            bottom: 0
+            left: 0
+            right: 0
+            width: 100%
+            border-radius: 0
+            height: 60px

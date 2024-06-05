@@ -1,0 +1,88 @@
+@import '../../common/files/variables.scss'
+
+    
+.equipment-second-swiper-wrapper.active
+    position: fixed
+    top: 96px
+    right: 0
+    left: 0
+    background: rgba(242, 244, 246, 1)
+    z-index: 50
+    @media(max-width: $desktop-md-2)
+        top: 55px
+    @media(max-width: $tab-sm)
+        top: 22px
+    .equipment-second-swiper
+        .navigation 
+            display: none
+    .swiper-slide 
+        .bottom
+            display: none
+.equipment-second-swiper-wrapper
+    background: rgba(242, 244, 246, 0.5)
+    transition: var(--trs-300)
+    padding-top: 30px
+    padding-bottom: 30px
+    margin-top: 30px
+    overflow: hidden
+    @media(max-width: $tab) 
+        padding-top: 20px
+        padding-bottom: 20px
+    .equipment-second-swiper
+        position: relative
+        .navigation
+            position: absolute
+            right: 0
+            display: flex
+            flex-direction: column
+            top: 0
+            bottom: 0
+            margin: auto
+            z-index: 5
+            @media(max-width: $tab) 
+                justify-content: center
+                gap: 5px
+                button
+                    width: 25px
+                    height: 25px
+                    padding: 0
+                    svg
+                        width: 100%
+                        height: 100%
+    .swiper-slide 
+        .top
+            h5 
+                // font-family: 'ActayWide', sans-serif
+                font-size: 18px
+                line-height: 23px
+                font-weight: 700
+                color: #3964FF
+                text-align: center
+                @media(max-width: $tab) 
+                    font-size: 14px
+                    line-height: 18px
+            span
+                // font-family: 'ActayWide', sans-serif
+                font-size: 20px
+                line-height: 26px
+                font-weight: 700
+                color: #3964FF
+                text-align: center
+                display: block 
+                @media(max-width: $tab) 
+                    font-size: 16px
+                    line-height: 20px
+        .bottom
+            font-weight: 400
+            font-size: 14px
+            line-height: 16px
+            color: #9C9FAE
+            text-align: center
+            max-width: 150px
+            margin: auto
+            margin-top: 15px
+            @media(max-width: $tab) 
+                font-size: 11px
+                line-height: 13px
+                margin-top: 10px
+// .equipment-second-swiper-fix 

@@ -1,0 +1,65 @@
+@import '../../common/files/variables.scss'
+
+.tour
+    background: var(--purple-color)
+    padding: 42px 52px 32px
+    position: relative
+    display: flex
+    flex-direction: column
+    align-items: center
+    gap: 32px
+    box-sizing: border-box
+    width: 100%
+    aspect-ratio: 2
+    height: calc(20vw * 1.4)
+    @media(max-width: $tab)
+        padding: 30px
+        height: calc(20vw * 2.6)
+    @media(max-width: $tab-sm)
+        height: calc(20vw * 3)
+
+    .type
+        position: absolute
+        top: 46px
+        right: 39px
+        color: var(--white-color)
+        // font-family: ActayWide, sans-serif
+        font-size: 24px
+        font-style: normal
+        font-weight: 700
+        line-height: 100%
+        text-transform: uppercase 
+        @media(max-width: $tab)
+            font-size: 16px
+            top: 10px
+            right: 10px
+    .imageWrapper
+        position: relative
+        width: 100%
+        height: 100%
+        height: calc(20vw * 1.4)
+        @media(max-width: $tab)
+            height: calc(20vw * 2.6)
+        @media(max-width: $tab-sm)
+            height: calc(20vw * 3)
+        img
+            border-radius: 50%
+            object-fit: cover
+            width: 100%
+            height: 100%
+            position: absolute
+            top: 0
+            bottom: 0
+            left: 0
+            right: 0
+    span
+        text-align: center
+        color: var(--white-color)
+        // font-family: ActayWide, sans-serif
+        font-size: 24px
+        font-style: normal
+        font-weight: 700
+        line-height: 100%
+        text-transform: uppercase
+        @media(max-width: $tab)
+            font-size: 16px

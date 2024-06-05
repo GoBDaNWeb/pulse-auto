@@ -1,0 +1,195 @@
+@import '../../common/files/variables.scss'
+    
+.carCard
+    border-bottom: 1px solid var(--gray-color)
+    // width: 427px
+    transition: border var(--trs-500)
+    background: var(--white-color)
+    height: 100%
+    display: flex
+    flex-direction: column
+    &:hover
+        border-color: var(--purple-color)
+        .imageWrapper
+            .info
+                .compare
+                    span
+                        background: var(--purple-color)
+                        color: var(--white-color)
+        .content
+            .price
+                color: var(--purple-color)
+    .imageWrapper
+        position: relative
+        height: 100%
+        aspect-ratio: 1.5
+        max-height: 275px
+        width: 100%
+        height: 100%
+        overflow: hidden
+        &:hover 
+            img
+                transform: scale(1.2)
+        img
+            position: absolute
+            width: 100%
+            height: 100%
+            object-fit: cover
+            transition: var(--trs-500)
+        .info
+            position: absolute
+            z-index: 2
+            top: 20px
+            right: 20px
+            left: 20px
+            display: flex
+            justify-content: space-between
+            pointer-events: none
+            @media(max-width: $tab)
+                top: 10px
+                left: 10px
+                right: 10px
+            .compare
+                display: flex
+                flex-direction: column
+                align-items: flex-end
+                gap: 10px
+                pointer-events: all
+                & > span
+                    transition: var(--trs-500)
+                    background: var(--white-color)
+                    border-radius: var(--rounded-xl)
+                    color: var(--purple-color)
+                    padding: 10px 15px
+                    @media(max-width: $tab)
+                        font-size: 12px
+                button
+                    display: flex
+                    justify-content: flex-end
+                    &:hover
+                        .inner-content
+                            width: 144px
+                            .hidden-content
+                                transform: translateX(0)
+                                opacity: 1
+                            svg
+                                circle 
+                                    stroke: rgba(116, 52, 164, 1)
+                    .inner-content
+                        width: 45px
+                        height: 45px
+                        border: 1px solid var(--purple-color)
+                        border-radius: 99999px 
+                        display: flex
+                        align-items: center
+                        transition: var(--trs-500)
+                        overflow: hidden
+                        position: relative
+                        background: #fff
+                        .hidden-content
+                            position: absolute
+                            top: 0
+                            bottom: 0
+                            right: 20px
+                            display: flex
+                            align-items: center
+                            justify-content: center
+                            pointer-events: none
+                            color: var(--dark-color)
+                            font-family: Onest, sans-serif
+                            font-size: 14px
+                            font-style: normal
+                            font-weight: 400
+                            line-height: 150%
+                            transform: translateX(100%)
+                            opacity: 0
+                            transition: var(--trs-500)
+                        svg
+                            z-index: 2
+                            circle 
+                                transition: var(--trs-500)
+                                stroke: rgba(116, 52, 164, 0)
+            img
+                position: relative
+                width: 40px !important
+                height: 40px !important
+    .content.full
+        padding: 0
+    & > a 
+        flex: 1
+    .content
+        display: flex
+        flex-direction: column
+        gap: 10px
+        margin-top: 30px
+        padding: 0 30px
+        flex: 1
+        @media(max-width: $tab)
+            padding: 0 20px
+            margin-top: 20px
+        .price
+            leading-trim: both
+            text-edge: cap
+            // font-family: ActayWide, sans-serif
+            font-size: 30px
+            font-style: normal
+            font-weight: 700
+            line-height: 130%
+            transition: var(--trs-500)
+            @media(max-width: $tab)
+                font-size: 24px
+        .title
+            // font-family: ActayWide, sans-serif
+            font-size: 22px
+            font-style: normal
+            font-weight: 700
+            line-height: 130%
+            @media(max-width: $tab)
+                font-size: 18px
+        .options
+            display: flex
+            flex-direction: column
+            gap: 5px
+            .option
+                display: grid
+                grid-template-columns: 30% 70%
+                @media(max-width: $tab)
+                    grid-template-columns: 44% 58%
+                .optionTitle
+                    color: var(--gray-text-color)
+                    font-size: 14px
+                    font-style: normal
+                    font-weight: 400
+                    line-height: 150%
+                .optionLabel
+                    font-size: 14px
+                    font-style: normal
+                    font-weight: 400
+                    line-height: 150%
+    .btns.full 
+        padding-left: 0 !important
+        padding-right: 0 !important
+        padding-top: 30px !important
+        padding-bottom:50px !important
+        button
+            padding: 15px 35px
+            @media(max-width: $tab)
+                width: 130px
+                padding: 0 10px
+                height: 50px
+    .btns
+        display: flex
+        align-items: center
+        gap: 10px
+        padding-bottom: 50px
+        padding-top: 30px
+        padding: 30px
+        .button
+            padding: 0 35px !important
+            height: 40px
+            @media(max-width: $tab)
+                width: 130px
+                padding: 0 10px !important
+                height: 50px
+        .aboutBtn
+            width: 100%

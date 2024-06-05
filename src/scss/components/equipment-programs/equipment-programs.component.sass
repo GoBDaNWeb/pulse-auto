@@ -1,0 +1,78 @@
+@import '../../common/files/variables.scss'
+
+.equipment-programs
+    padding-top: 100px !important
+    background: url('../img/equipment/equipment-bg.jpg')
+    padding-bottom: 100px !important
+    overflow: hidden
+    @media(max-width: $tab)
+        padding-top: 70px !important
+    .top
+        display: flex
+        flex-direction: column
+        align-items: center
+        gap: 30px
+        @media(max-width: $tab)
+            gap: 20px
+        h4
+            color: var(--dark-color)
+            text-align: center
+            // font-family: ActayWide, sans-serif
+            font-size: 35px
+            font-style: normal
+            font-weight: 700
+            line-height: 100%
+            text-transform: uppercase
+            @media(max-width: $tab)
+                font-size: 25px
+        p
+            color: var(--dark-color)
+            text-align: center
+            font-family: Onest, sans-serif
+            font-size: 16px
+            font-style: normal
+            font-weight: 400
+            line-height: 150%
+            max-width: 885px
+            @media(max-width: $tab)
+                font-size: 14px
+    .programsList
+        margin-top: 50px
+        display: grid
+        grid-template-columns: repeat(6,1fr)
+        gap: 25px
+        @media(max-width: $desktop-md)
+            grid-template-columns: repeat(4,1fr)
+        @media(max-width: $tab)
+            grid-template-columns: repeat(3,1fr)
+        @media(max-width: $tab-sm)
+            display: none
+    .programsListMob
+        display: none
+        overflow: hidden
+        .innerList
+            display: flex
+            animation: scroll 35s linear infinite
+        @media(max-width: $tab-sm)
+            display: flex
+            flex-direction: column
+
+            object
+                width: 201px !important
+                height: 50px !important
+                svg
+                    width: 100% !important
+                    height: 100% !important
+                
+    .formWrapper
+        max-width: 1110px
+        margin: auto
+        margin-top: 50px
+        padding: 0 20px
+
+
+@keyframes scroll 
+    from 
+        transform: translateX(0)
+    to 
+        transform: translateX(calc(-100% - 20px))

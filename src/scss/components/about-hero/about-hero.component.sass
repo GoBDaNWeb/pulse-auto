@@ -1,0 +1,98 @@
+@import '../../common/files/variables.scss'
+
+.about-hero
+    height: 100vh
+    position: relative
+    overflow: hidden
+    .breadcrumbWrapper
+        position: absolute
+        top: 150px
+        z-index: 10
+        left: 50px
+        @media(max-width: $tab-sm)
+            display: none
+    .title
+        position: absolute
+        left: 50px
+        top: 190px
+        z-index: 10
+        // font-family: ActayWide, sans-serif
+        font-size: 45px
+        font-style: normal
+        font-weight: 700
+        line-height: 100%
+        text-transform: uppercase 
+        color: var(--white-color)
+        @media(max-width: $tab)
+            font-size: 30px
+            top: 100px
+            left: 20px
+
+    .info
+        position: absolute
+        bottom: 50px
+        left: 50px
+        z-index: 10
+        color: var(--white-color)
+        // font-family: ActayWide, sans-serif
+        font-size: 30px
+        font-style: normal
+        font-weight: 700
+        max-width: 540px
+        line-height: 130%
+        @media(max-width: $desktop-md-2)
+            bottom: 150px
+        @media(max-width: $tab)
+            font-size: 18px
+            left: 20px
+    .about-hero-swiper
+        height: 100vh
+        .imageWrapper
+            position: relative
+            width: 100%
+            height: 100%
+            img
+                position: absolute
+                top: 0
+                left: 0
+                bottom: 0
+                right: 0
+                object-fit: cover
+                width: 100%
+                height: 100%
+    .about-hero-thumbs
+        position: absolute
+        right: 50px
+        bottom: 50px
+        display: flex
+        justify-content: flex-start
+        width: 40vw
+        @media(max-width: $desktop-sm)
+            // width: 810px
+        @media(max-width: $tab)
+            bottom: 25px
+            right: 5px
+            left: 5px
+            width: 97%
+        @media(max-width: $tab-sm)
+            right: 5px
+            left: 5px
+        .swiper-wrapper
+            width: initial !important
+            margin: 0 0 0 auto !important
+            @media(max-width: $tab)
+                width: 100% !important
+                margin: 0 auto !important
+        .thumb
+            cursor: pointer
+            // width: 116px !important
+            height: 77px !important
+            .imageWrapper
+                // width: 116px
+                height: 77px
+                position: relative
+                img
+                    position: absolute
+                    object-fit: cover
+                    width: 100%
+                    height: 100%

@@ -1,0 +1,43 @@
+.button.rounded
+    width: 40px
+    height: 40px
+    border-radius: var(--rounded-full)
+    border: 1px solid var(--purple-color)
+    color: var(--purple-color)
+.button.outline
+    border: 1px solid var(--purple-color)
+    color: var(--purple-color)
+    transition: var(--trs-500)
+    &:hover
+        color: var(--purple-hover-color)
+        border-color: var(--purple-hover-color)
+.button.primary
+    background: var(--purple-color)
+    color: var(--white-color)
+    transition: var(--trs-500)
+    &:hover
+        background: var(--purple-hover-color)
+        
+.button.secondary
+    background: var(--white-color)
+    color: var(--purple-color)
+.button.dotted
+    border: 1px dashed var(--purple-color)
+    color: var(--purple-color)
+    transition: var(--trs-500)
+    &:hover 
+        color: var(--purple-hover-color)
+        border-color: var(--purple-hover-color)
+a.button
+    display: flex
+    align-items: center
+    justify-content: center
+.button
+    border-radius: var(--rounded-sm)
+    text-transform: uppercase
+    border: none
+    cursor: pointer
+    background: none
+    &:disabled
+        opacity: .5
+        pointer-events: none

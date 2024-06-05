@@ -1,0 +1,32 @@
+$max: 40;
+$offset: 8;
+$offset2: 4;
+$unit: 'px';
+@mixin list-loop($className, $styleName) {
+  $i: 0;
+  $step: 0;
+  @while $i <= $max {
+    #{$className + $step} { 
+      #{$styleName}: #{$i + $unit}!important;
+    }
+
+    @if ($step > 0) and ($step < 3) {
+        $i: $i + $offset2;
+    }
+    @else {
+        $i: $i + $offset;
+    }
+    $step: $step + 1;
+  }
+}
+
+@include list-loop('.p-', 'padding');
+@include list-loop('.pt-', 'padding-top');
+@include list-loop('.pr-', 'padding-right');
+@include list-loop('.pb-', 'padding-bottom');
+@include list-loop('.pl-', 'padding-left');
+@include list-loop('.m-', 'margin');
+@include list-loop('.mt-', 'margin-top');
+@include list-loop('.mr-', 'margin-right');
+@include list-loop('.mb-', 'margin-bottom');
+@include list-loop('.ml-', 'margin-left');

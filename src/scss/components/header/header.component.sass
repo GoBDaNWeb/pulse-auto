@@ -1,0 +1,298 @@
+@import '../../common/files/variables.scss'
+    
+.header
+    position: fixed
+    top: 0
+    left: 0
+    right: 0
+    background: var(--white-color)
+    display: flex
+    align-items: center
+    z-index: var(--z-header)
+    box-shadow: var(--shadow)
+    @media(max-width: $desktop-md-2)
+        justify-content: space-between
+        padding: 0 20px
+    .socialMob
+        display: none
+        @media(max-width: $desktop-md-2)
+            display: flex
+            align-items: center
+            gap: 20px
+    .logo
+        cursor: pointer
+        margin: 20px 0
+        padding: 0 40px 
+        display: flex
+        flex-direction: column
+        gap: 15px
+        align-items: center
+        border-right: 1px solid var(--gray-color)
+        @media(max-width: $desktop-md-2)
+            border-right: none
+        @media(max-width: $tab-sm)
+            margin: 10px 0
+        .logoWrapper
+            width: 167px
+            height: 45px
+            position: relative
+            @media(max-width: $tab-sm)
+                width: 125px
+                height: 33px
+            img
+                width: 100%
+                height: 100%
+                position: absolute
+                object-fit: cover
+        p
+            color: var(--purple-color)
+            text-align: center
+            leading-trim: both
+            text-edge: cap
+            font-size: 10px
+            font-style: normal
+            font-weight: 400
+            line-height: 110%
+            letter-spacing: 3.5px
+            text-transform: uppercase
+            @media(max-width: $desktop-md-2)
+                display: none
+    .content
+        flex: 1
+        display: grid
+        grid-template-rows: repeat(2,1fr)
+        margin-left: 31px
+        @media(max-width: $desktop-md-2)
+            display: none
+        .top
+            display: flex
+            justify-content: space-between
+            align-items: center
+            // display: flex
+            // width: 100%
+            // align-items: center
+            border-bottom: 1px solid var(--gray-color)
+            // удалить потом
+            // padding-bottom: 15px
+            .searchBtn
+                display: none
+                align-items: center
+                gap: 24px
+                font-size: 14px
+                font-style: normal
+                font-weight: 400
+                line-height: 150%
+                border-right: 1px solid var(--gray-color)
+                width: 100%
+                position: relative
+                .search-results.active
+                    transform: translateY(0)
+                    opacity: 1
+                    pointer-events: all
+                .search-results
+                    transition: var(--trs-500)
+                    transform: translateY(-20%)
+                    opacity: 0
+                    pointer-events: none
+                    position: absolute
+                    top: 44px
+                    background: var(--white-color)
+                    border-radius: 5px
+                    box-shadow: 0px 4px 35px 0px rgba(0, 0, 0, 0.05)
+                    padding: 0 20px 20px
+                    z-index: 10
+                    width: 450px
+                    .results-list
+                        display: flex
+                        flex-direction: column
+                        .result-item
+                            display: flex
+                            align-items: center
+                            gap: 20px
+                            padding: 20px 
+                            border-bottom: 1px solid #E2E3EB
+                            img
+                                width: 85px
+                                height: 55px
+                                object-fit: cover
+                            .result-item-content
+                                display: flex
+                                flex-direction: column
+                                gap: 5px
+                                .result-item-price
+                                    color: var(--dark-color)
+                                    // font-family: ActayWide, sans-serif
+                                    font-size: 20px
+                                    font-style: normal
+                                    font-weight: 700
+                                    line-height: 130%
+                                .result-item-title
+                                    color: var(--dark-color)
+                                    // font-family: ActayWide, sans-serif
+                                    font-size: 14px
+                                    font-style: normal
+                                    font-weight: 700
+                                    line-height: 130%
+                    .allSearch
+                        margin-top: 20px
+                        height: 40px
+                        display: flex
+                        align-items: center
+                        justify-content: center
+                        width: 200px
+                        // font-family: ActayWide, sans-serif
+                        font-size: 13px
+                        font-style: normal
+                        font-weight: 700
+                        line-height: 100% 
+                        text-transform: uppercase 
+            .info
+                width: 100%
+                padding-left: 15vw
+                display: flex
+                align-items: center
+                justify-content: space-between
+                gap: 30px
+                .address
+                    flex: 1
+                    display: flex
+                    align-items: center
+                    gap: 10px
+                    font-size: 14px
+                    font-style: normal
+                    font-weight: 400
+                    line-height: 150%
+                    white-space: nowrap
+                .clock
+                    flex: 1
+                    display: flex
+                    align-items: center
+                    gap: 10px
+                    font-size: 14px
+                    font-style: normal
+                    font-weight: 400
+                    line-height: 150%
+                    white-space: nowrap
+
+                .social
+                    flex: 1
+                    display: flex
+                    align-items: center
+                    gap: 24px
+                    a 
+                        &:first-child
+                            width: 25px
+                            height: 25px
+                        &:last-child
+                            width: 20px
+                            height: 20px
+                    svg
+                        width: 100%
+                        height: 100%
+                        path
+                            transition: var(--trs-300)
+                    .telegramIcon
+                        &:hover
+                            svg
+                                path
+                                    fill: #0B92FF
+                    .whatsappIcon
+                        &:hover
+                            svg
+                                path
+                                    fill: #1AC673
+                .phone
+                    flex: 1
+                    font-size: 15px
+                    font-style: normal
+                    font-weight: 500
+                    line-height: 120%
+                    text-transform: uppercase 
+                    white-space: nowrap
+                    text-align: right
+                .orderBtn
+                    color: var(--purple-color)
+                    leading-trim: both
+                    text-edge: cap
+                    // font-family: ActayWide, sans-serif
+                    font-size: 12px
+                    font-style: normal
+                    font-weight: 700
+                    line-height: 100%
+                    text-transform: uppercase 
+                    white-space: nowrap
+                    text-align: right
+                    padding-right: 50px
+                    width: fit-content !important
+                    transition: var(--trs-500)
+                    &:hover
+                        color: var(--purple-hover-color)
+        .bottom
+            display: flex
+            // display: none
+            justify-content: flex-end
+
+            .navigation
+                display: flex
+                justify-content: space-between
+                width: 100%
+                margin-right: 55px
+                .link.select
+                    span
+                        color: var(--purple-color)
+                .link.active
+                    span
+                        color: var(--purple-color)
+                        &::after
+                            opacity: 1
+                .link
+                    padding: 22px 0
+                    text-align: center
+                    text-transform: uppercase
+                    font-size: 14px
+                    font-style: normal
+                    font-weight: 500
+                    line-height: 140%
+                    letter-spacing: 1.4px
+                    text-transform: uppercase 
+                    cursor: pointer
+                    
+                    &:hover
+                        span
+                            color: var(--purple-color)
+                            &::after
+                                opacity: 1
+                    span
+                        transition: var(--trs-300)
+                        position: relative
+                        &::after
+                            transition: var(--trs-300)
+                            content: ''
+                            width: 100%
+                            position: absolute
+                            bottom: 0
+                            height: 2px
+                            background: var(--purple-color)
+                            left: 0
+                            bottom: -23px
+                            opacity: 0
+            .estimationBtn
+                white-space: nowrap
+                width: 238px
+                height: 63px
+                min-width: 238px
+                max-width: 238px
+                border-radius: 0px
+                // font-family: ActayWide, sans-serif
+                font-size: 13px
+                font-style: normal
+                font-weight: 700
+                line-height: 100%
+                text-transform: uppercase 
+                display: flex
+                align-items: center
+                justify-content: center
+    .burger
+        display: none
+        @media(max-width: $desktop-md-2)
+            display: block

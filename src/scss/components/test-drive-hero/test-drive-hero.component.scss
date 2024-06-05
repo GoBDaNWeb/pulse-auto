@@ -1,0 +1,54 @@
+@import "../../common/files/variables.scss";
+
+.test-drive-hero {
+  background-image: url("../img/test-drive/hero.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  @media (max-width: $pre-mob) {
+    height: 50vh;
+  }
+  .breadcrumbWrapper {
+    position: absolute;
+    top: 150px;
+    z-index: 10;
+    left: 50px;
+    @media (max-width: $tab-sm) {
+      display: none;
+    }
+  }
+  .hero-text {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    padding: 0 20px;
+    h1 {
+      font-weight: 700;
+      font-size: 45px;
+      line-height: 45px;
+      text-align: center;
+      color: #fff;
+      text-transform: uppercase;
+      font-family: "ActayWide", sans-serif;
+      @media (max-width: $tab) {
+        font-size: 30px;
+        line-height: 31px;
+      }
+    }
+    p {
+      font-weight: 400;
+      font-size: 18px;
+      line-height: 27px;
+      color: #fff;
+      text-align: center;
+      @media (max-width: $tab) {
+        font-size: 14px;
+        line-height: 21px;
+      }
+    }
+  }
+}
